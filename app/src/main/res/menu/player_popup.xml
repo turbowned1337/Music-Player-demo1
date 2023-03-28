@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/openFile"
+        android:title="@string/open_file_menu_string" />
+    <item
+        android:id="@+id/getSongFromAPI"
+        android:title="@string/get_song_from_api_string" />
+    <item
+        android:id="@+id/provideToken"
+        android:title="@string/provide_spotify_token" />
+
+</menu>

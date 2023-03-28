@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerElements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?selectableItemBackground"
+            android:padding="13dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close_icon"
+            app:layout_constraintEnd_toEndOf="@+id/albumCover"
+            app:layout_constraintStart_toStartOf="@+id/albumCover"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/albumCover"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuButton"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/greeting"
+            android:textColor="@color/text_color_selector"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/albumCover"
+            app:layout_constraintTop_toBottomOf="@+id/albumCover"
+            app:layout_constraintVertical_bias="0.20"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/performerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/greeting2"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/albumCover"
+            app:layout_constraintTop_toBottomOf="@+id/songName"
+            tools:ignore="SpUsage" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressTint="@color/text_color_selector"
+            android:thumbOffset="3dp"
+            android:thumbTint="@color/text_color_selector"
+            app:layout_constraintEnd_toEndOf="@+id/albumCover"
+            app:layout_constraintStart_toStartOf="@+id/albumCover"
+            app:layout_constraintTop_toBottomOf="@+id/performerText"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/timeCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp"
+            android:text="@string/_0_00"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@+id/seekBar"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/timeFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp"
+            android:text="@string/_4_10"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/seekBar"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            tools:ignore="SpUsage" />
+
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="35dp"
+            android:background="?selectableItemBackground"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/next_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/playButton"
+            app:layout_constraintEnd_toStartOf="@+id/playButton"
+            app:layout_constraintTop_toTopOf="@+id/playButton"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/play_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="35dp"
+            android:background="?selectableItemBackground"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:scaleX="-1"
+            android:src="@drawable/next_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/playButton"
+            app:layout_constraintStart_toEndOf="@+id/playButton"
+            app:layout_constraintTop_toTopOf="@+id/playButton"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/likeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?selectableItemBackground"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/heart"
+            app:layout_constraintBottom_toBottomOf="@+id/performerText"
+            app:layout_constraintEnd_toEndOf="@+id/albumCover"
+            app:layout_constraintTop_toTopOf="@+id/songName"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
